@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeroJson</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/homepage/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='icons/css/all.min.css')}}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>
+                <a href="/">
+                    <i class="fa fa-chevron-left"></i> 
+                    <span>Hero</span>Json 
+                    /<i class="fa fa-chevron-right"></i>
+                </a>
+            </h2>
+        </div>
+        <ul>
+            <li><a href="/">Pagina Inicial</a></li>
+            <li><a href="/documentação">Documentação</a></li>
+            <li><a href="/contribuição">Contribuição</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="banner">
+            <img src="{{url_for('static',filename='img/python.png')}}" alt="logo da linguagem python" class="py-logo">
+            <i class="fa fa-plus"></i>
+            <img src="{{url_for('static',filename='img/json.svg')}}" alt="logo da linguagem json" class="json-logo">
+            <i class="fa fa-arrow-right"></i>
+            <div class="logo">
+                <h2>
+                    <a>
+                        <i class="fa fa-chevron-left"></i> 
+                        <span>Hero</span>Json 
+                        /<i class="fa fa-chevron-right"></i>
+                    </a>
+                </h2>
+            </div>
+        </section>
+        <section class="box-content">
+            <div class="box">
+                <h2 class="box-title">* Leve *</h2>
+                <article class="description">
+                    <p>
+                        O Pacote HeroJson é um pacote leve. A sua dependência é de um modúlo padrão do python(Json), 
+                        o que significa que não há porque não tê-lo!
+                    </p>
+                </article>
+            </div>
+            <div class="box">
+                <h2 class="box-title">* Facíl *</h2>
+                <article class="description">
+                    <p>
+                        Além de ser facíl de se instalar, é também facíl de se usar... Não é necessário um curso para
+                        usar este pacote. O que é preciso é apenas saber ```ler uma documentação```.
+                    </p>
+                </article>
+            </div>
+            <div class="box">
+                <h2 class="box-title">* Aberto *</h2>
+                <article class="description">
+                    <p>
+                        Está faltando fazer algo e o HeroJson não consegue fazê-lo?
+                        Por quê não adicionas essa funcão tu mesmo? <br />
+                        Faça um fork do projeto no GitHub, trabalhe nele e faça um 
+                        pull. Desse jeito tu podes contribuir também!
+                    </p>
+                </article>
+            </div>
+        </section>
+        <section class="intro">
+            <h2 class="title">O que é o HeroJson ?</h2>
+            <div class="left">
+                <article>
+                    <h2>
+                        O HeroJson é um modúlo python para manipulação de arquivos json. <br />
+                        Este modúlo depende do modúlo json do python, ou seja não é necessário
+                        muita coisa para usa-lo.
+                    </h2>
+                </article>
+            </div>
+            <div class="right">
+                <div class="logo">
+                    <h2>
+                        <a>
+                            <i class="fa fa-chevron-left"></i> 
+                            <span>Hero</span>Json 
+                            /<i class="fa fa-chevron-right"></i>
+                        </a>
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <section class="example">
+            <h2 class="title">Como Usa-lo?</h2>
+            <h3>
+                Aqui em baixo está um exemplo simples de como o pacote HeroJson funciona!
+            </h3>
+            <h4>Crie um arquivo example.json no diretório raíz(pode ser um outro qualquer)</h4>
+            <div class="codespace">
+                <p>{</p>
+                    <p>
+                        <span class="cls">"nome"</span> : <span class="str">"Eliseu"</span>,
+                    </p>
+                    <p>
+                        <span class="cls">"idade"</span> : <span class="str">17</span>
+                    </p>
+                <p>}</p>
+            </div>
+            <h4>Depois do nosso example.json ter sido criado, podemos criar agora o nosso app.py</h4>
+            <div class="codespace">
+                <p><span class="r">from</span> herojson <span class="r">import</span> <span class="cls">JsonHero</span></p>
+                <p><span class="comt">#</span></p>
+                <p>
+                    json = <span class="cls">JsonHero</span>(
+                        <span class="param">path</span> = <span class="str">"./example.json"</span>, 
+                        <span class="param">encoding</span> = <span class="str">"UTF-8"</span>
+                    )
+                </p>
+                <p>
+                    json.<span class="cls">add</span>(
+                        <span class="param">key</span> = <span class="str">"altura"</span>,
+                        <span class="param">value</span> = <span class="comt">1.87</span>
+                    ) <span class="comt"># Adiciona uma nova chave ao arquivo json.</span>
+                </p>
+            </div>
+            <h4>Agora o nosso arquivo example.json deverá estar assim: </h4>
+            <div class="codespace">
+                <p>{</p>
+                    <p>
+                        <span class="cls">"nome"</span> : <span class="str">"Eliseu"</span>,
+                    </p>
+                    <p>
+                        <span class="cls">"idade"</span> : <span class="str">17</span>,
+                    </p>
+                    <p>
+                        <span class="cls">"altura"</span> : <span class="comt">1.87</span>
+                    </p>
+                <p>}</p>
+            </div>
+            <h4>Vamos mais uma vez mexer em nosso app.py</h4>
+            <div class="codespace">
+                <p><span class="r">from</span> herojson <span class="r">import</span> <span class="cls">JsonHero</span></p>
+                <p>
+                    <span class="cls">print</span>(json.<span class="cls">key</span>(
+                        <span class="param">key</span> = <span class="str">"nome"</span>
+                    )) <span class="comt"># Retorna o valor da chave passada se esta existir.</span>
+                </p>
+                <p></p><p></p>
+                <p class="output">
+                    <span>>>> <span>" Eliseu "</span></span>
+                </p>
+            </div>
+            <h4>Agora modificando mais uma vez o nosso example.json</h4>
+            <div class="codespace">
+                <p><span class="r">from</span> herojson <span class="r">import</span> <span class="cls">JsonHero</span></p>
+                <p>
+                    json.<span class="cls">drop</span>(
+                        <span class="param">key</span> = <span class="str">"idade"</span>
+                    )
+                </p>
+            </div>
+            <h4>Agora o nosso arquivo example.json deverá estar assim: </h4>
+            <div class="codespace">
+                <p>{</p>
+                    <p>
+                        <span class="cls">"nome"</span> : <span class="str">"Eliseu"</span>,
+                    </p>
+                    <p>
+                        <span class="cls">"altura"</span> : <span class="comt">1.87</span>
+                    </p>
+                <p>}</p>
+            </div>
+            <h3>
+                E este foi um simples exemplo de como o herojson pode ajudar a manipular um arquivo json.
+            </h3>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright Eliseu Gaspar - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

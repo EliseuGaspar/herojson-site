@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeroJson :: Contributions</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/contributions/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='icons/css/all.min.css')}}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>
+                <a href="/">
+                    <i class="fa fa-chevron-left"></i> 
+                    <span>Hero</span>Json 
+                    /<i class="fa fa-chevron-right"></i>
+                </a>
+            </h2>
+        </div>
+        <ul>
+            <li><a href="/">Pagina Inicial</a></li>
+            <li><a href="/documentação">Documentação</a></li>
+            <li><a href="/contribuição">Contribuição</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="left">
+            <h3>Baixe o Código aqui: </h3>
+            <button class="download"><a href="https://github.com/EliseuGaspar/herojson/archive/refs/heads/master.zip">herojson.zip <i class="fas fa-download"></i></a></button>
+            <h4>Depois podes envia-lo por e-mail ou o seu link do repósitorio dele.</h4>
+            <span><i class="fa fa-mail-bulk"></i> eliseugaspar4@gmail.com</span>
+        </section>
+        <section class="right">
+            <h3>Faça um gitclone do projeto</h3>
+            <p><i class="fab fa-github"></i></p>
+            <button value="https://github.com/EliseuGaspar/herojson/" id="copy">
+                <span>https://github.com/EliseuGaspar/herojson/</span>
+                <i class="fa fa-copy"></i>
+            </button>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright Eliseu Gaspar - Todos os direitos reservados.</p>
+    </footer>
+
+    <script type="text/javascript" src="{{url_for('static',filename='scripts/function.js')}}"></script>
+</body>
+</html>

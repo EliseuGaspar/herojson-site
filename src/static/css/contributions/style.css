@@ -1,0 +1,76 @@
+@import url(../root.css);
+@import url(../header.css);
+@import url(../footer.css);
+
+main{
+    background-color: #f8f8f8;
+    position: relative; top: 0;
+    width: 100%; height: 100vh;
+    display: flex; justify-content: space-around;
+    align-items: center;
+}
+
+main *{
+    color: #222;
+}
+
+.left{
+    width: 500px; text-align: center;
+    display: flex; flex-direction: column;
+    gap: 10px; border: 1px solid #ddd;
+    padding: 20px; border-radius: 20px;
+    justify-content: center; align-items: center;
+}
+
+.left span{
+    margin-bottom: 0.8rem;
+}
+
+.left button.download{
+    margin: 0.7rem 0;
+}
+
+.left button{
+    width: 150px; height: 34px;
+    background-color: #ebb736d2;
+}
+
+.left button *{color: #f8f8f8;}
+
+.left form{
+    display: flex;
+}
+
+.left input{
+    height: 34px; border: 1px solid #ebb736d2;
+    text-indent: 7px; color: #333;
+}
+
+.right{
+    width: 500px; text-align: center;
+    display: flex; flex-direction: column;
+    gap: 10px; border: 1px solid #ddd;
+    padding: 20px; border-radius: 20px;
+    justify-content: center; align-items: center;
+}
+
+.right p i{
+    font-size: 37px;
+    color: #270944;
+}
+
+.right button{
+    display: flex; flex-direction: column;
+    gap: 10px; justify-content: center;
+    align-items: center;
+}
+
+.right button span{
+    font-size: 16px;
+    padding: 7px 16px;
+    border: 1px solid #270944;
+}
+
+.right button i{
+    font-size: 20px;
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeroJson :: Documentação</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/docs/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='icons/css/all.min.css')}}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>
+                <a href="/">
+                    <i class="fa fa-chevron-left"></i> 
+                    <span>Hero</span>Json 
+                    /<i class="fa fa-chevron-right"></i>
+                </a>
+            </h2>
+        </div>
+        <ul>
+            <li><a href="/">Pagina Inicial</a></li>
+            <li><a href="/documentação">Documentação</a></li>
+            <li><a href="/contribuição">Contribuição</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="intro">
+            <h3>
+                O HeroJson é muito simples de se mexer, porém só é possível usâ-lo se este estiver em sua máquina. <br />
+                Para instala-lo basta usar um dos comandos abaixo!
+            </h3>
+            <div class="cmd">
+                <div class="cmd-container">
+                    <h4>No windows:</h4>
+                    <div>
+                        <button value="pip install herojson" class="comand">
+                            <p>pip install herojson</p>
+                            <i class="fa fa-copy"></i>
+                        </button>
+                        <button value="pip -m install herojson" class="comand">
+                            <p>pip -m install herojson</p>
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="cmd-container">
+                    <h4>No Linux:</h4>
+                    <div>
+                        <button value="sudo pip install herojson" class="comand">
+                            <p>sudo pip install herojson</p>
+                            <i class="fa fa-copy"></i>
+                        </button>
+                        <button value="sudo pip3 -m install herojson" class="comand">
+                            <p>sudo pip3 install herojson</p>
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="doc-description">
+            <h2>Conhecendo melhor o HeroJson</h2>
+            <h3>
+                Ao ser chamado a instância do HeroJson necessita de dois paramatros: 
+                <span class="dest">o path e o encoding.</span>
+                Veja o exemplo abaixo!
+            </h3>
+            <div class="codespace">
+                <p>
+                    <span class="r">from</span> herojson <span class="r">import</span> JsonHero
+                </p>
+                <p></p>
+                <p>
+                    json = <span class="cls">JsonHero</span>(
+                        <span class="param">path</span> = <span class="str">"./example.json"</span>,
+                        <span class="param">encoding</span> = <span class="str">"UTF-8"</span>
+                        )
+                </p>
+            </div>
+            <h3>
+                Descrevendo os seus metódos: 
+            </h3>
+            <h4>
+                key() : Este metódo retorna o Valor da chave passada por parametro se esta existir, e None se não.
+            </h4>
+            <div class="codespace">
+                <p>{</p>
+                    <p>
+                        <span class="cls">"nome"</span> : <span class="str">"Eliseu"</span>,
+                    </p>
+                    <p>
+                        <span class="cls">"idade"</span> : <span class="str">17</span>
+                    </p>
+                <p>}</p>
+            </div>
+            <div class="codespace">
+                <p><span class="r">from</span> herojson <span class="r">import</span> <span class="cls">JsonHero</span></p>
+                <p>
+                    <span class="cls">print</span>(json.<span class="cls">key</span>(
+                        <span class="param">key</span> = <span class="str">"nome"</span>
+                    )) <span class="comt"># Retorna o valor da chave passada se esta existir.</span>
+                </p>
+                <p></p><p></p>
+                <p class="output">
+                    <span>>>> <span>" Eliseu "</span></span>
+                </p>
+            </div>
+            <div class="codespace">
+                <p><span class="r">from</span> herojson <span class="r">import</span> <span class="cls">JsonHero</span></p>
+                <p>
+                    <span class="cls">print</span>(json.<span class="cls">key</span>(
+                        <span class="param">key</span> = <span class="str">"peso"</span>
+                    )) <span class="comt"># Retorna o valor da chave passada se esta existir.</span>
+                </p>
+                <p></p><p></p>
+                <p class="output">
+                    <span>>>> <span>" None "</span></span>
+                </p>
+            </div>
+            <h4>
+                add() : Este metódo adiciona um novo par de chave e valor se estes não existirem ainda!
+            </h4>
+            <div class="codespace">
+                <p>
+                    <span class="r">from</span> herojson <span class="r">import</span> JsonHero
+                </p>
+                <p></p>
+                <p>
+                    json = <span class="cls">JsonHero</span>(
+                        <span class="param">path</span> = <span class="str">"./example.json"</span>,
+                        <span class="param">encoding</span> = <span class="str">"UTF-8"</span>
+                        )
+                </p>
+                <p>
+                    json.<span class="cls">add</span>(
+                        <span class="param">key</span> = <span class="str">"peso"</span>,
+                        <span class="param">value</span> = <span class="str">"55kg"</span>
+                    )
+                </p>
+            </div>
+            <div class="codespace">
+                <p>{</p>
+                    <p>
+                        <span class="cls">"nome"</span> : <span class="str">"Eliseu"</span>,
+                    </p>
+                    <p>
+                        <span class="cls">"idade"</span> : <span class="str">17</span>,
+                    </p>
+                    <p>
+                        <span class="cls">"peso"</span> : <span class="str">"55kg"</span>
+                    </p>
+                <p>}</p>
+            </div>
+            <h4>
+                drop() : Este metódo deleta um par de chave e valor se existirem.
+            </h4>
+            <div class="codespace">
+                <p>
+                    <span class="r">from</span> herojson <span class="r">import</span> JsonHero
+                </p>
+                <p></p>
+                <p>
+                    json = <span class="cls">JsonHero</span>(
+                        <span class="param">path</span> = <span class="str">"./example.json"</span>,
+                        <span class="param">encoding</span> = <span class="str">"UTF-8"</span>
+                        )
+                </p>
+                <p>
+                    json.<span class="cls">drop</span>(
+                        <span class="param">key</span> = <span class="str">"peso"</span>
+                    )
+                </p>
+            </div>
+            <div class="codespace">
+                <p>{</p>
+                    <p>
+                        <span class="cls">"nome"</span> : <span class="str">"Eliseu"</span>,
+                    </p>
+                    <p>
+                        <span class="cls">"idade"</span> : <span class="str">17</span>
+                    </p>
+                <p>}</p>
+            </div>
+            <h4>
+                update() : Este metódo atualiza o valor de uma chave se esta existir.
+            </h4>
+            <div class="codespace">
+                <p>
+                    <span class="r">from</span> herojson <span class="r">import</span> JsonHero
+                </p>
+                <p></p>
+                <p>
+                    json = <span class="cls">JsonHero</span>(
+                        <span class="param">path</span> = <span class="str">"./example.json"</span>,
+                        <span class="param">encoding</span> = <span class="str">"UTF-8"</span>
+                        )
+                </p>
+                <p>
+                    json.<span class="cls">update</span>(
+                        <span class="param">key</span> = <span class="str">"nome"</span>,
+                        <span class="param">key</span> = <span class="str">"Gaspar"</span>
+                    )
+                </p>
+            </div>
+            <div class="codespace">
+                <p>{</p>
+                    <p>
+                        <span class="cls">"nome"</span> : <span class="str">"Gaspar"</span>,
+                    </p>
+                    <p>
+                        <span class="cls">"idade"</span> : <span class="str">17</span>
+                    </p>
+                <p>}</p>
+            </div>
+            <h4>
+                AllKeys() : Este metódo retorna uma lista com os nomes de todas as chaves contidas no arquivo json.
+            </h4>
+            <div class="codespace">
+                <p>
+                    <span class="r">from</span> herojson <span class="r">import</span> JsonHero
+                </p>
+                <p></p>
+                <p>
+                    json = <span class="cls">JsonHero</span>(
+                        <span class="param">path</span> = <span class="str">"./example.json"</span>,
+                        <span class="param">encoding</span> = <span class="str">"UTF-8"</span>
+                        )
+                </p>
+                <p><span class="cls">print</span>(json.<span class="cls">AllKeys</span>())</p>
+                <p class="output">
+                    <span>>>> <span>["nome","idade"]</span></span>
+                </p>
+            </div>
+            <h4>
+                AllValues() : Este metódo retorna uma lista com os nomes de todos os valores contidos no arquivo json.
+            </h4>
+            <div class="codespace">
+                <p>
+                    <span class="r">from</span> herojson <span class="r">import</span> JsonHero
+                </p>
+                <p></p>
+                <p>
+                    json = <span class="cls">JsonHero</span>(
+                        <span class="param">path</span> = <span class="str">"./example.json"</span>,
+                        <span class="param">encoding</span> = <span class="str">"UTF-8"</span>
+                        )
+                </p>
+                <p><span class="cls">print</span>(json.<span class="cls">AllValues</span>())</p>
+                <p class="output">
+                    <span>>>> <span>["Gaspar",17]</span></span>
+                </p>
+            </div>
+            <h4>
+                Content() : Retorna o conteúdo do arquivo em forma de string.
+            </h4>
+            <div class="codespace">
+                <p>
+                    <span class="r">from</span> herojson <span class="r">import</span> JsonHero
+                </p>
+                <p></p>
+                <p>
+                    json = <span class="cls">JsonHero</span>(
+                        <span class="param">path</span> = <span class="str">"./example.json"</span>,
+                        <span class="param">encoding</span> = <span class="str">"UTF-8"</span>
+                        )
+                </p>
+                <p><span class="cls">print</span>(json.<span class="cls">Content</span>())</p>
+                <p class="output">
+                    <span>>>> <span>{"nome":"Gaspar","idade":17}</span></span>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright Eliseu Gaspar - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

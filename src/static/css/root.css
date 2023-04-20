@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    padding: 0; margin: 0;
+    font-family: Hind Madurai;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+button, input{
+    background-color: transparent;
+    color: inherit; border: 0;
+    cursor: pointer;
+}
+
+:focus{
+    outline: none;
+}

@@ -1,0 +1,132 @@
+@import url(../root.css);
+@import url(../header.css);
+@import url(./code.css);
+@import url(../footer.css);
+
+main{
+    position: relative; top: 0;
+    width: 100%; display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+main section{
+    position: relative; top: 0;
+    width: 100%; height: 100vh;
+    display: flex; justify-content: center;
+    align-items: center; gap: 17px;
+}
+
+main section.banner{
+    height: 80vh; border-bottom: 1px solid #7f7f7f;
+}
+
+main .banner .py-logo{
+    width: 70px;
+}
+
+main .banner .json-logo{
+    width: 100px;
+}
+
+main .banner .logo h2{
+    color: goldenrod; font-size: 47px;
+    font-weight: 300;
+}
+
+main .banner .logo h2 a i{
+    font-size: xx-large;
+}
+
+/* >>> fim da estilizacão do section.banner */
+
+main .box-content{
+    display: flex; justify-content: center;
+    align-items: normal; flex-wrap: wrap;
+    gap: 50px; height: auto !important;
+}
+
+main .box-content .box{
+    position: relative; top: -55px;
+    width: 300px; height: 200px;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    border-radius: 10px; cursor: pointer;
+    padding: 10px; text-align: center;
+    border: 1px solid rgba(218, 165, 32, 0.753);
+    background-color: #e9e9e9; color: #222;
+}
+
+.box-title{
+    position: absolute; top: 10px;
+    color: rgba(218, 165, 32, 0.753);
+}
+
+.intro{
+    height: 85vh;
+}
+
+.intro .title{
+    position: absolute; top: 30px;
+    font-size: 30px; font-weight: 300;
+    display: flex; justify-content: center;
+    color: #222;
+}
+
+.intro .title::after{
+    position: absolute; bottom: -7px;
+    background-color: goldenrod;
+    width: 120px; height: 1.6px;
+    content: "";
+}
+
+.intro div{
+    width: 50%; height: 300px;
+    display: flex; justify-content: center;
+    align-items: center; text-align: center;
+}
+
+.intro .logo h2{
+    color: goldenrod; font-size: 52px;
+    font-weight: 300;
+}
+
+.intro .logo h2 a i{
+    font-size: xx-large;
+}
+
+.intro .left article{
+    width: 500px;
+}
+
+.intro .left article h2{
+    position: relative; top: 0;
+    font-weight: 300; color: #222;
+}
+
+.example{
+    flex-direction: column;
+    gap: 20px; height: 210vh !important;
+}
+
+.example .title{
+    position: absolute; top: 30px;
+    font-size: 30px; font-weight: 300;
+    display: flex; justify-content: center;
+    color: #222; margin-bottom: 2rem;
+}
+
+.example .title::after{
+    position: absolute; bottom: -7px;
+    background-color: goldenrod;
+    width: 120px; height: 1.6px;
+    content: "";
+}
+
+.example h3{
+    font-weight: 300;
+}
+
+

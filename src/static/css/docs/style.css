@@ -1,0 +1,92 @@
+@import url(../root.css);
+@import url(../header.css);
+@import url(../footer.css);
+@import url(../homepage/code.css);
+
+body{
+    background-color: #f8f8f8;
+}
+
+main{
+    position: relative; top: 0;
+    width: 100%; display: flex;
+    justify-content: center; align-items: center;
+    flex-direction: column; gap: 20px;
+    margin-bottom: 5rem;
+}
+
+main *{
+    font-weight: 300; color: #222;
+}
+
+.space{
+    margin: 17px;
+}
+
+.intro{
+    position: relative; top: 0;
+    width: 100%; height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    gap: 40px; text-align: center;
+}
+
+.intro h3{
+    font-size: 27px;
+}
+
+.intro .cmd{
+    width: 80%; display: flex;
+    flex-direction: column; justify-content: center;
+    gap: 20px;
+}
+
+.intro .cmd .cmd-container{
+    width: 100%; display: flex; gap: 5px;
+    flex-direction: column; align-items: center;
+}
+
+.intro .cmd .cmd-container h4{
+    width: 827px; height: 1.5rem;
+    text-align: left;
+}
+
+.intro .cmd .cmd-container div{
+    display: flex; gap: 7px;
+}
+
+.intro .cmd .cmd-container div button{
+    width: 420px; height: 2rem; padding: 4px 17px;
+    display: flex; justify-content: space-between;
+    align-items: center; background-color: #123456;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.intro .cmd .cmd-container div button *{
+    color: #f8f8f8;
+}
+
+.dest{
+    background-color: #ddd;
+    padding: 3px 6px;
+}
+
+.doc-description h2{
+    width: 100%; text-align: center;
+    margin-bottom: 5rem;
+}
+
+.doc-description{
+    display: flex; flex-direction: column;
+    gap: 15px;
+}
+
+.doc-description h4{
+    margin-top: 2rem; font-size: 19px;
+    color: rgb(172, 128, 19);
+}
+
+.codespace{
+    width: 100%;
+}
+
